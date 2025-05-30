@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelForge Studios</title>
+
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-[var(--preto)] text-[var(--branco)]">
+
+  <header class="bg-[var(--roxo)] fixed w-full z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#" class="flex items-center space-x-2 gamer-font text-[var(--neon)] text-xl" onclick="location.reload()">
+        <img src="./assets/img/Logo.png" alt="Logo PixelForge" class="w-12 h-12" />
+        <span>PixelForge</span>
+      </a>
+
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#jogos" class="hover:text-[var(--neon)]">Jogos</a>
+        <a href="#trailer" class="hover:text-[var(--neon)]">Trailer</a>
+        <a href="#depoimentos" class="hover:text-[var(--neon)]">Depoimentos</a>
+        <a href="#contato" class="hover:text-[var(--neon)]">Parcerias</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="trailer" class="pt-32 pb-20 bg-[var(--preto)] text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl gamer-font gamer-title mb-4">Prepare-se para o próximo nível</h2>
+      <p class="text-gray-300 mb-8 max-w-xl mx-auto">Conheça o universo épico criado pela PixelForge Studios. Confira o
+        trailer do nosso novo lançamento!</p>
+      <div class="aspect-w-16 aspect-h-9 mx-auto max-w-4xl">
+        <iframe class="w-full h-[500px] rounded-xl"
+          src="https://www.youtube.com/embed/IpSDW3Mq-7E?si=NokhyzdxdrFiOrZJ" title="Trailer do jogo" frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="jogos" class="bg-[var(--roxo)] py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-2xl gamer-font text-[var(--neon)] mb-10">Nossos Jogos</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="card bg-[var(--preto)] rounded-lg p-4">
+          <img src="./assets/img/Fallout4.jpg" alt="CyberStrike" class="mx-auto mb-4 h-64 w-auto rounded-md" />
+          <h4 class="text-2xl text-[var(--neon)] font-bold mb-2" style="font-family: 'Consolas', monospace;">
+            Fallout 4
+          </h4>
+          <p class="text-gray-300">Um RPG pós-apocalíptico onde você explora um mundo devastado, enfrenta ameaças
+            mutantes e decide o destino da humanidade.</p>
+        </div>
+
+        <div class="card bg-[var(--preto)] rounded-lg p-4">
+          <img src="./assets/img/ForzaHorizon5.jpg" alt="PixelQuest" class="mx-auto mb-4 h-64 w-auto rounded-md" />
+          <h4 class="text-2xl text-[var(--neon)] font-bold mb-2" style="font-family: 'Consolas', monospace;">
+            Forza Horizon 5
+          </h4>
+          <p class="text-gray-300">Corra em alta velocidade por paisagens vibrantes do México com gráficos realistas e
+            carros de tirar o fôlego.</p>
+        </div>
+
+        <div class="card bg-[var(--preto)] rounded-lg p-4">
+          <img src="./assets/img/TheWitcher3.png" alt="Forge Racer" class="mx-auto mb-4 h-64 w-auto rounded-md" />
+          <h4 class="text-2xl text-[var(--neon)] font-bold mb-2" style="font-family: 'Consolas', monospace;">
+            The Witcher 3: Wild Hunt
+          </h4>
+          <p class="text-gray-300">Assuma o papel de Geralt em um mundo de fantasia sombria, caçando monstros e
+            enfrentando escolhas que mudam tudo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="bg-[var(--preto)] py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-2xl gamer-font text-[var(--neon)] mb-10">A voz da Comunidade</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="testimonial">
+          <p>"Fallout 4 me prendeu por horas! O mundo é imersivo e cheio de escolhas difíceis."</p>
+          <span class="block text-sm text-[var(--neon)] mt-4">– @VaultSurvivor</span>
+        </div>
+
+        <div class="testimonial">
+          <p>"Forza Horizon 5 é o jogo de corrida mais bonito que já joguei. Sensação de liberdade total."</p>
+          <span class="block text-sm text-[var(--neon)] mt-4">– @SpeedHunter</span>
+        </div>
+
+        <div class="testimonial">
+          <p>"The Witcher 3 é uma obra-prima. Histórias profundas e combates épicos com Geralt."</p>
+          <span class="block text-sm text-[var(--neon)] mt-4">– @WhiteWolf</span>
+        
+    </div>
+  </section>
+
+  <section id="contato" class="bg-[var(--roxo)] py-20 text-center">
+    <div class="container mx-auto px-6 max-w-xl">
+      <h3 class="text-2xl gamer-font text-[var(--neon)] mb-6">Parcerias e Contato</h3>
+      <form id="form-contato" class="space-y-4">
+        <input type="text" id="nome" placeholder="Nome" class="w-full p-2 rounded" required />
+        <input type="email" id="email" placeholder="Email" class="w-full p-2 rounded" required />
+        <textarea id="mensagem" placeholder="Mensagem" rows="4" class="w-full p-2 rounded" required></textarea>
+        <button type="submit" class="button-neon">Enviar</button>
+      </form>
+      <div id="aviso" class="hidden mt-4 p-4 rounded text-white font-bold text-center"></div>
+    </div>
+  </section>
+
+  <footer class="bg-[var(--preto)] border-t border-[var(--neon)] py-6 text-center text-sm text-gray-400">
+    © 2025 PixelForge Studios — Forjando Experiências Épicas.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("form-contato");
+      const aviso = document.getElementById("aviso");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        aviso.textContent = "Mensagem enviada com sucesso!";
+        aviso.classList.remove("hidden");
+        aviso.style.backgroundColor = "#10b981";
+        aviso.style.display = "block";
+
+        form.reset();
+
+        setTimeout(() => {
+          aviso.style.display = "none";
+        }, 5000);
+      });
+    });
+  </script>
+
+</body>
+
+</html>

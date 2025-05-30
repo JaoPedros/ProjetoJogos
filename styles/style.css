@@ -1,0 +1,172 @@
+/* ========== Fontes ========== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --roxo: #3D348B;
+  --neon: #00F5FF;
+  --preto: #0A0A0A;
+  --branco: #FFFFFF;
+}
+
+/* ======= Configuração global ======= */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--preto);
+  color: var(--branco);
+  margin: 0;
+  padding: 0;
+}
+
+.gamer-font {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+/* ======= Títulos com sombra neon ======= */
+.gamer-title {
+  color: var(--neon);
+  text-shadow: 0 0 6px var(--neon), 0 0 12px var(--neon);
+}
+
+/* ======= Botão neon ======= */
+.button-neon {
+  background-color: var(--neon);
+  color: var(--preto);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px var(--neon), 0 0 20px var(--neon);
+}
+
+.button-neon:hover {
+  background-color: #00e0e0;
+  box-shadow: 0 0 12px #00e0e0, 0 0 25px #00e0e0;
+}
+
+/* ======= Cartões de jogo ======= */
+.card {
+  background-color: var(--preto);
+  border: 1px solid var(--neon);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Faz o card crescer e aparecer o box-shadow no hover */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Faz a imagem crescer junto com o card */
+.card img {
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* ====== Brilhos coloridos diferentes para cada card ====== */
+
+/* Fallout 4 - brilho laranja avermelhado */
+.fallout:hover {
+  box-shadow:
+    0 0 20px 4px rgba(255, 69, 0, 0.7),
+    0 0 30px 8px rgba(255, 140, 0, 0.5);
+}
+
+/* Forza Horizon 5 - brilho azul vibrante */
+.forza:hover {
+  box-shadow:
+    0 0 20px 4px rgba(0, 191, 255, 0.7),
+    0 0 30px 8px rgba(135, 206, 250, 0.5);
+}
+
+/* The Witcher 3 - brilho verde */
+.witcher:hover {
+  box-shadow:
+    0 0 20px 4px rgba(34, 139, 34, 0.7),
+    0 0 30px 8px rgba(50, 205, 50, 0.5);
+}
+
+/* ======= Depoimentos ======= */
+.testimonial {
+  background-color: var(--roxo);
+  color: var(--branco);
+  padding: 20px;
+  border-radius: 10px;
+  font-style: italic;
+  border-left: 4px solid var(--neon);
+  box-shadow: 0 0 10px var(--roxo);
+}
+
+/* ======= Formulário ======= */
+form input,
+form textarea {
+  width: 100%;
+  background-color: var(--preto);
+  color: var(--branco);
+  border: 1px solid var(--neon);
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #888;
+}
+
+#aviso {
+  background-color: #22c55e; /* verde */
+}
+
+nav a {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--neon);
+  box-shadow: 0 0 8px var(--neon);
+  transition: width 0.4s ease;
+  border-radius: 2px;
+}
+
+nav a:hover {
+  color: var(--neon);
+}
+
+nav a:hover::after {
+  width: 100%;
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Animação de brilho neon suave */
+@keyframes neon-glow {
+  from {
+    box-shadow:
+      0 0 5px var(--neon),
+      0 0 15px var(--neon),
+      0 0 25px var(--neon);
+  }
+  to {
+    box-shadow:
+      0 0 10px var(--neon),
+      0 0 20px var(--neon),
+      0 0 30px var(--neon);
+  }
+}
